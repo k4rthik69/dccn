@@ -50,3 +50,14 @@ $ns at 4.0 "$cbr1 stop"
 $ns at 4.5 "$cbr0 stop"
 $ns at 5.0 "finish"
 $ns run 
+
+BEGIN{
+count=0;
+} {
+if($1=="d") count++
+} END{
+printf("The Total no
+of Packets Drop is
+:%d\n\n", count)
+}
+
