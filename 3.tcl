@@ -60,3 +60,16 @@ for {set i 1} {$i <= 18} {incr i} {
  $ns at $t "$ping5 send" }
 $ns at 5.0 "finish"
 $ns run 
+
+BEGIN{
+count=0;
+}
+{
+if($1=="d")
+count++;
+}
+END{
+printf("The Total no of Packets
+Drop is :%d\n\n", count);
+} 
+
